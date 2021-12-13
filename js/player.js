@@ -6,6 +6,7 @@ const songList = [
     album:`Head Above Water`,
     genre:`pop`,
     songSrc: `/music/blonde.mp3`,
+    imgSrc: `../img/img1.png`
 },
 {
     title:`Bomb`,
@@ -14,6 +15,7 @@ const songList = [
     album:`Bomb (Single)`,
     genre:`kpop`,
     songSrc: `/music/bomb.mp3`,
+    imgSrc: `../img/img2.png`
 },
 {
     title:`Butter`,
@@ -22,6 +24,7 @@ const songList = [
     album:`Butter (Single)`,
     genre:`kpop`,
     songSrc: `/music/butter.mp3`,
+    imgSrc: `../img/img1.png`
 },
 {
     title:`Dog Days Are Over`,
@@ -49,3 +52,20 @@ const songList = [
 }
 ]
 
+//adding Array with appendToList code
+const addSong = function(song) {
+	// Concatinate to the existing string
+	document.querySelector(`#songs`).innerHTML += `
+    <article class="title ${song.title}">
+        <h3>${song.title}</h3>
+        <h4>${song.artist}</h3>
+        <img src=${song.imgSrc}></image>
+        <p>${song.duration}</p>
+    </article>
+    <h2 class="singer ${song.artist}${song.artist}</h5>
+    `
+}
+
+// LOOP:
+// Iterate over each item within the Array, calling a function and passing it the value as an argument
+songList.forEach(addSong)
