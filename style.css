@@ -20,12 +20,17 @@ header {
 
 img {
     margin: 0.75rem 0;
-    border-radius: 50%;
+    max-width: 15em;
     box-shadow: 28px 28px 50px rgba(13, 39, 80, .2), -1px -5px 5px rgba(255, 255, 255, .5);
 }
-/*ul {
+ul {
     list-style-type: none;
-    color: white;
+}
+li {
+	box-shadow: 28px 28px 50px rgba(13, 39, 80, .2), -1px -5px 5px rgba(255, 255, 255, .5);
+
+}
+   /* color: white;
 }
 .playlist {
     display: flex;
