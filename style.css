@@ -1,5 +1,5 @@
-body {
-    background-color: #242424;
+/*body {
+    /*background-color: #242424;*/
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
@@ -11,7 +11,19 @@ header {
     background-color: rgb(22, 22, 22);
     color: #fff;
 }
-ul {
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 28px 28px 50px rgba(13, 39, 80, .2), -1px -5px 5px rgba(255, 255, 255, .5);
+}
+
+img {
+    margin: 0.75rem 0;
+    border-radius: 50%;
+    box-shadow: 28px 28px 50px rgba(13, 39, 80, .2), -1px -5px 5px rgba(255, 255, 255, .5);
+}
+/*ul {
     list-style-type: none;
     color: white;
 }

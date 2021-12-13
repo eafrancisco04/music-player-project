@@ -12,12 +12,30 @@
         <h1>Music Player</h1>
     </header>
 
-    <div>
-      <audio controls source src="./music-files/awakening-instrumental.mp3" type="audio/mp3" autoplay>
-      </audio>
-    </div>
+    <section id="playlist-container">
+        <div class="song-buttons">
+          <div class="buttons">
+            <img class="playBtn" src="img/play.png"></image>
+            <image class="pauseBtn" src="img/pause.png"></image>
+            <image class="shuffleBtn" src="img/shuffle.png"></image>
+          </div>
+        </div>
 
+        <div class="song-details">
+          <img id="imgPlaying" src="../img/song-cover.jpg" alt=""/>
+          <ul>
+            <li><h4 id="songTitle">Title</h4></li>
+            <li><h4 id="artistPlaying">Artist</h4></li>
+            <li><h3 id="elapsedTime">00:00</h3></li>
+            
+            <audio id="audio"></audio>
+
+          </ul>
+        </div>
+
+    </section>
+    
   </body>
-	<script src="playlist.js"></script>
+	<script src="/js/player.js"></script>
   </body>
 </html>
