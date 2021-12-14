@@ -24,7 +24,7 @@ const songList = [
     album:`Butter (Single)`,
     genre:`kpop`,
     songSrc: `/music/butter.mp3`,
-    imgSrc: `../img/img1.png`
+    imgSrc: `../img/img3.png`
 },
 {
     title:`Dog Days Are Over`,
@@ -33,6 +33,7 @@ const songList = [
     album:`Lungs`,
     genre:`alternative`,
     songSrc: `/music/dog.mp3`,
+    imgSrc: `../img/img4.png`
 },
 {
     title:`Fire`,
@@ -41,6 +42,7 @@ const songList = [
     album:`Debut (Single)`,
     genre:`kpop`,
     songSrc: `/music/fire.mp3`,
+    imgSrc: `../img/img5.png`
 },
 {
     title:`Go!!!`,
@@ -49,6 +51,25 @@ const songList = [
     album:`Haikyuu Soundtrack`,
     genre:`anime`,
     songSrc: `/music/go.mp3`,
+    imgSrc: `../img/img6.png`
+},
+{
+    title:`Icy`,
+    artist:`ITZY`,
+    duration:`03:20`,
+    album:`IT'z ICY`,
+    genre:`kpop`,
+    songSrc: `/music/icy.mp3`,
+    imgSrc: `../img/img7.png`
+},
+{
+    title:`Icy`,
+    artist:`ITZY`,
+    duration:`03:20`,
+    album:`IT'z ICY`,
+    genre:`kpop`,
+    songSrc: `/music/icy.mp3`,
+    imgSrc: `../img/img8.png`
 }
 ]
 
@@ -64,6 +85,21 @@ const addSong = function(song) {
     `
 }
 
-// LOOP:
-// Iterate over each item within the Array, calling a function and passing it the value as an argument
+// Play and pause music while changing the image src
 songList.forEach(addSong)
+
+const playOrpause = document.getElementById(`playPause`)
+
+const musicPlaying = new Audio(`/music/blonde.mp3`)
+
+playOrpause.addEventListener(`click`, function(event){
+    if (musicPlaying.paused) {
+    musicPlaying.play();
+    document.getElementById(`playPause`).src=`img/play-arrow.svg`;
+    } 
+    else {
+    musicPlaying.pause();
+    document.getElementById(`playPause`).src=`img/pause.svg`;
+    }
+}) 
+
