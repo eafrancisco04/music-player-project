@@ -53,6 +53,7 @@ body{
 img {
     margin: 0.75rem 0;
     max-width: 15em;
+<<<<<<< HEAD
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5), -1px -5px 5px rgba(52, 52, 52, .7);
 }
 .songlist {
@@ -62,6 +63,18 @@ img {
 
 ul {
     list-style-type: none;
+=======
+    box-shadow: 28px 28px 50px rgba(13, 39, 80, .2), -1px -5px 5px rgba(255, 255, 255, .5);
+}
+ul {
+    list-style-type: none;
+}
+li {
+	box-shadow: 28px 28px 50px rgba(13, 39, 80, .2), -1px -5px 5px rgba(255, 255, 255, .5);
+
+}
+   /* color: white;
+>>>>>>> bb286b7d8a615fa088408becdc51dc0cf4c0dc75
 }
 .song {
     display: flex;

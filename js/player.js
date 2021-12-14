@@ -52,7 +52,7 @@ const songList = [
 }
 ]
 
-//adding Array with appendToList code
+//show Array as a list of songs
 const addSong = function(song) {
 	// Concatinate to the existing string
 	document.getElementById(`song-list`).innerHTML += `
