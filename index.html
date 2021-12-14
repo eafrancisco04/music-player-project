@@ -6,39 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music Player</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;1,300&display=swap">
   </head>
   <body>
     <header>
         <h1>Music Player</h1>
     </header>
 
-    <section id="playlist-container">
-        <div class="song-buttons">
-          <div class="buttons">
-            <img class="playBtn" src="img/play.png"></image>
-            <image class="pauseBtn" src="img/pause.png"></image>
-            <image class="shuffleBtn" src="img/shuffle.png"></image>
-          </div>
-        </div>
+    <section class="playlist-container">
+        <div class="playing-song">
+          <img id="cover" src="/img/img1.png" alt="song cover"/>
 
-        <div class="song-details">
-          <img id="imgPlaying" src="../img/song-cover.jpg" alt=""/>
-          <ul>
-            <li><h4 id="songTitle">Title</h4></li>
-            <li><h4 id="artistPlaying">Artist</h4></li>
-            <li><h3 id="elapsedTime">00:00</h3></li>
-            
-            <audio id="audio"></audio>
-
+          <h4 id="songTitle">Title</h4>
+          <h4 id="artistPlaying">Artist</h4>
+          <h3 id="elapsedTime">00:00</h3>
           </ul>
         </div>
 
+          <audio id="audio" src="./music/blonde.mp3"></audio>
+        
+            <div class="song-buttons">
+              <div class="buttons">
+                <img id="playBtn" src="img/play.png"></image>
+                <img id="pauseBtn" src="img/pause.png"></image>
+                
+              </div>
+            </div>
     </section>
-    <div id="songs">
+
+
+    <div class="songlist" id="songs">
+      <h2>Playlist Songs</h4>
+          <ul id="song-list">
+
+          </ul>
 
     </div>
     
   </body>
-	<script src="/js/player.js"></script>
+	<script src="./js/player.js"></script>
   </body>
 </html>
