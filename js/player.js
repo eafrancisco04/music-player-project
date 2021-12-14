@@ -5,8 +5,8 @@ const songList = [
     duration:`03:35`,
     album:`Head Above Water`,
     genre:`pop`,
-    songSrc: `/music/blonde.mp3`,
-    imgSrc: `../img/img1.png`
+    songSrc: `/music/coversblonde.mp3`,
+    imgSrc: `../img/covers/img1.png`
 },
 {
     title:`Bomb`,
@@ -15,7 +15,7 @@ const songList = [
     album:`Bomb (Single)`,
     genre:`kpop`,
     songSrc: `/music/bomb.mp3`,
-    imgSrc: `../img/img2.png`
+    imgSrc: `../img/covers/img2.png`
 },
 {
     title:`Butter`,
@@ -24,7 +24,7 @@ const songList = [
     album:`Butter (Single)`,
     genre:`kpop`,
     songSrc: `/music/butter.mp3`,
-    imgSrc: `../img/img3.png`
+    imgSrc: `../img/covers/img3.png`
 },
 {
     title:`Dog Days Are Over`,
@@ -33,7 +33,7 @@ const songList = [
     album:`Lungs`,
     genre:`alternative`,
     songSrc: `/music/dog.mp3`,
-    imgSrc: `../img/img4.png`
+    imgSrc: `../img/covers/img4.jpg`
 },
 {
     title:`Fire`,
@@ -42,16 +42,16 @@ const songList = [
     album:`Debut (Single)`,
     genre:`kpop`,
     songSrc: `/music/fire.mp3`,
-    imgSrc: `../img/img5.png`
+    imgSrc: `../img/covers/img5.jpg`
 },
 {
     title:`Go!!!`,
     artist:`FLOW`,
     duration:`04:05`,
-    album:`Haikyuu Soundtrack`,
+    album:`Naruto Soundtrack`,
     genre:`anime`,
     songSrc: `/music/go.mp3`,
-    imgSrc: `../img/img6.png`
+    imgSrc: `../img/covers/img6.jpg`
 },
 {
     title:`Icy`,
@@ -60,17 +60,36 @@ const songList = [
     album:`IT'z ICY`,
     genre:`kpop`,
     songSrc: `/music/icy.mp3`,
-    imgSrc: `../img/img7.png`
+    imgSrc: `../img/covers/img7.jpg`
 },
 {
-    title:`Icy`,
-    artist:`ITZY`,
-    duration:`03:20`,
-    album:`IT'z ICY`,
+    title:`Kings & Queens`,
+    artist:`Ava Max`,
+    duration:`02:40`,
+    album:`Heaven & Hell`,
+    genre:`pop`,
+    songSrc: `/music/kings-queens.mp3`,
+    imgSrc: `../img/covers/img8.jpg`
+},
+{
+    title:`Maria`,
+    artist:`Hwasa`,
+    duration:`03:21`,
+    album:`Mria`,
     genre:`kpop`,
-    songSrc: `/music/icy.mp3`,
-    imgSrc: `../img/img8.png`
-}
+    songSrc: `/music/marias.mp3`,
+    imgSrc: `../img/covers/img9.jpg`
+},
+{
+    title:`Sour Candy`,
+    artist:`Lady Gaga`,
+    duration:`03:21`,
+    album:`Chromatica`,
+    genre:`pop`,
+    songSrc: `/music/sour-candy.mp3`,
+    imgSrc: `../img/covers/img10.jpeg`
+},
+
 ]
 
 //show Array as a list of songs
@@ -95,11 +114,11 @@ const musicPlaying = new Audio(`/music/blonde.mp3`)
 playOrpause.addEventListener(`click`, function(event){
     if (musicPlaying.paused) {
     musicPlaying.play();
-    document.getElementById(`playPause`).src=`img/play-arrow.svg`;
+    document.getElementById(`playPause`).src=`img/buttons/play-arrow.svg`;
     } 
     else {
     musicPlaying.pause();
-    document.getElementById(`playPause`).src=`img/pause.svg`;
+    document.getElementById(`playPause`).src=`img/buttons/pause.svg`;
     }
 }) 
 
