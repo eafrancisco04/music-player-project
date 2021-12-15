@@ -2,6 +2,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Mulish', sans-serif;
+    color: white;
 }
 body{
     
@@ -27,22 +28,21 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
+    margin: auto auto 2em auto;
 
     padding: 1em;
-    max-width: 30%;
+    max-width: 25%;
+
     background-color: rgb(94, 91, 91) 92%;
-    border-radius: 1em;
+    border-radius: 5em;
     color: white;
-    box-shadow: 25px 25px 50px rgba(13, 39, 80, .8), -1px -5px 30px rgba(200, 200, 200, .5),
-    0 0 0 16px rgba(155, 13, 234, 1);
+    box-shadow: 3px 3px 5px #000000, -1px -5px 5px #343434;
+}
+#cover {
+    border-radius: 10%;
+
 }
 
-/* box-shadow: 25px 25px 50px rgba(13, 39, 80, .8), -1px -5px 30px rgba(200, 200, 200, .5),
-    0 0 0 16px rgba(155, 13, 234, 1)*/
-
-/* current: box-shadow: 25px 25px 50px rgba(13, 39, 80, .8), -1px -5px 30px rgba(200, 200, 200, .5),
-        0 0 0 16px rgba(155, 13, 234, 1); */
 .playing-song {
     display: flex;
     flex-direction: column;
@@ -50,23 +50,26 @@ h4 {
     align-items: center;
 
     margin: auto;
+    
 }
-.buttons {
+.buttonsPlayer {
     display: flex;
-    justify-content: space-around;
-    align-self: flex-end;
+    justify-content: space-between;
+    align-self: flex-end;  
 }
 
 img {
     margin: 0.75rem 0;
     max-width: 15em;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5), -1px -5px 5px rgba(52, 52, 52, .7);
+    
 }
 .songlist {
     margin: auto;
     padding: 2em;
     gap: 1em;
     max-width: 60%;
+    background-color: rgba(0, 0, 0, 0.2);
 } 
 
 ul {
@@ -84,16 +87,23 @@ ul {
     color: white;
 }
 
-.duration {
+.duration  {
     align-self: flex-end;
+}
+#playThis {
+    max-width: 2em;
+    max-height: 2em;
+
 }
 
 aside {
     align-self: flex-end;
+    
 }
 
 .Btn {
     height: 45px;
+    margin: 1em;
     color: white;
     padding: .25rem;
     max-width: 4em;
@@ -101,9 +111,16 @@ aside {
     background-color: #242424;
     border: none;
     border-radius: 2em;
-    box-shadow: inset -5px -5px 15px rgba(25, 25, 25, 0.5), inset -1px -5px 5px rgba(35, 35, 35, .2);
+    box-shadow: 25px 25px 50px rgba(13, 39, 80, .8), -1px -5px 10px rgba(200, 200, 200, .5),
+        0 0 0 6px rgba(155, 13, 234, 1);
 }
-.buttons {
-    display: flex;
-    gap: 1em;
-}
+
+button {
+    padding: 1em;
+    color: white;
+    background-color: #242424;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, .4), -1px -4px 5px rgba(52, 52, 52, .7);
+    outline: none;
+    }

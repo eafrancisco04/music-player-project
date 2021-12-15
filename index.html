@@ -17,8 +17,8 @@
         <div class="playing-song">
           <img id="cover" src="/img/covers/img1.png" alt="song cover"/>
 
-          <h4 id="songTitle">Title</h4>
-          <h4 id="artistPlaying">Artist</h4>
+          <h4 id="songTitle">Dumb Blonde</h4>
+          <h4 id="artistPlaying">Avril Lavigne</h4>
           <h4 id="elapsedTime">00:00</h3>
           </ul>
         </div>
@@ -26,23 +26,31 @@
         <audio id="audio" src="./music/blonde.mp3"></audio>
         
         <div class="song-buttons">
-          <div class="buttons">
-            <img src="img/buttons/shuffle.svg" class="Btn" id="shuffleBtn"></image>
-            <img src="img/buttons/prev.svg" class="Btn" id="playPause"></image>
+          <div class="buttonsPlayer">
+
+            <img src="img/buttons/prev.svg" class="Btn" id="prevBtn"></image>
             <img src="img/buttons/play-arrow.svg" class="Btn" id="playPause"></image>
             <img src="img/buttons/next.svg" class="Btn" id="nextBtn"></image>
                 
           </div>
         </div>
     </section>
-
-    <aside class="filter" id="filter">
-      <h2>Filter</h2>
-      <button>Alphabetically</button>
-    </aside>
     
     
     <div class="songlist" id="songs">
+      <aside class="filter" id="filter">
+        <h2>Sort By</h2>
+        <button id="sortByTitle">Song Title</button>
+        <button id="sortByArtist">By Artist</button>
+
+        <h2>Filter by Category</h2>
+        <button id="kpop">Kpop</button>
+        <button id="anime">Anime</button>
+        <button id="rock">Rock</button>
+        <button id="alternative">Alternative</button>
+        <button id="westPop">Western pop</button>
+        <button id="classical">Classical</button>
+    </aside>
       <h2>Playlist Songs</h2>
           <ul id="song-list">
 
