@@ -125,6 +125,14 @@ prevBtn.addEventListener("click", function() {
     if (playingIndex < 0){
 
     playingIndex = songList.length - 1
+
+    musicPlaying.src = songList[playingIndex].songSrc
+    musicPlaying.play();
+    } else {
+
+    playingIndex --
+
+    musicPlaying.src = songList[playingIndex].songSrc
     musicPlaying.play();
     }
   
