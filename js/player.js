@@ -138,16 +138,16 @@ playOrpause.addEventListener(`click`, function(event){
     }
 }) 
 
-/////Filter
-const titleSearch = document.getElementById(search);
+/////Filter by typing
+const titleSearch = document.getElementById(`search`);
 
 const searchSong = function(e) {
     e.preventDefault();
-    // Check the form's values, do some stuff...
+    
     const nameSearch = document.getElementById('input-search').value
 
     // Clear out the existing results
-    document.querySelector(#song-list).innerHTML = ``
+    document.getElementById(`song-list`).innerHTML = ``
   
     songList
       .filter(song => song.title.toUpperCase().includes(nameSearch.toUpperCase()))
