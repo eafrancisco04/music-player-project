@@ -92,6 +92,7 @@ const songList = [
 ]
 
 const playingTitle = document.getElementById(`playingTitle`)
+const artistPlaying = document.getElementById(`artistPlaying`)
 const playOrpause = document.getElementById(`playPause`)
 const nextSong = document.getElementById(`nextBtn`)
 const prevSong = document.getElementById(`prevBtn`)
@@ -101,20 +102,18 @@ let playingIndex = 0
 
 const musicPlaying = new Audio()
 musicPlaying.src = songList[playingIndex].songSrc
-titlePlaying = songList[playingIndex].title
 
 //// Play and pause song on Index
 playOrpause.addEventListener(`click`, function(){
     if (musicPlaying.paused) {
     musicPlaying.play();
     document.getElementById(`playPause`).src=`img/buttons/play-arrow.svg`;
-
-    playingTitle.innerText = `${titlePlaying}`
     
     } 
     else {
     musicPlaying.pause();
     document.getElementById(`playPause`).src=`img/buttons/pause.svg`;
+
     }
 }) 
 
@@ -135,10 +134,12 @@ prevBtn.addEventListener("click", function() {
     musicPlaying.src = songList[playingIndex].songSrc
     musicPlaying.play();
     }
+    playingTitle.innerText = `${songList[playingIndex].title}`
+    artistPlaying.innerText = `${songList[playingIndex].artist}`
   
   });
 
-
+  
 
 ////Display Array as list of songs
 const addSong = function(song) {
