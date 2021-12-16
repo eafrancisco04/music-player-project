@@ -6,7 +6,7 @@ const songList = [
     album:`Head Above Water`,
     genre:`pop`,
     songSrc: `/music/blonde.mp3`,
-    imgSrc: `../img/covers/img1.png`
+    imgSrc: `./img/covers/img1.png`
 },
 {
     title:`Bomb`,
@@ -15,7 +15,7 @@ const songList = [
     album:`Bomb (Single)`,
     genre:`kpop`,
     songSrc: `/music/bomb.mp3`,
-    imgSrc: `../img/covers/img2.png`
+    imgSrc: `./img/covers/img2.png`
 },
 {
     title:`Butter`,
@@ -24,7 +24,7 @@ const songList = [
     album:`Butter (Single)`,
     genre:`kpop`,
     songSrc: `/music/butter.mp3`,
-    imgSrc: `../img/covers/img3.png`
+    imgSrc: `./img/covers/img3.png`
 },
 {
     title:`Dog Days Are Over`,
@@ -33,7 +33,7 @@ const songList = [
     album:`Lungs`,
     genre:`alternative`,
     songSrc: `/music/dog.mp3`,
-    imgSrc: `../img/covers/img4.jpg`
+    imgSrc: `./img/covers/img4.jpg`
 },
 {
     title:`Fire`,
@@ -42,7 +42,7 @@ const songList = [
     album:`Debut (Single)`,
     genre:`kpop`,
     songSrc: `/music/fire.mp3`,
-    imgSrc: `../img/covers/img5.jpg`
+    imgSrc: `./img/covers/img5.jpg`
 },
 {
     title:`Go!!!`,
@@ -51,7 +51,7 @@ const songList = [
     album:`Naruto Soundtrack`,
     genre:`anime`,
     songSrc: `/music/go.mp3`,
-    imgSrc: `../img/covers/img6.jpg`
+    imgSrc: `./img/covers/img6.jpg`
 },
 {
     title:`Icy`,
@@ -60,7 +60,7 @@ const songList = [
     album:`IT'z ICY`,
     genre:`kpop`,
     songSrc: `/music/icy.mp3`,
-    imgSrc: `../img/covers/img7.jpg`
+    imgSrc: `./img/covers/img7.jpg`
 },
 {
     title:`Kings & Queens`,
@@ -69,7 +69,7 @@ const songList = [
     album:`Heaven & Hell`,
     genre:`pop`,
     songSrc: `/music/kings-queens.mp3`,
-    imgSrc: `../img/covers/img8.jpg`
+    imgSrc: `./img/covers/img8.jpg`
 },
 {
     title:`Maria`,
@@ -78,7 +78,7 @@ const songList = [
     album:`Mria`,
     genre:`kpop`,
     songSrc: `/music/maria.mp3`,
-    imgSrc: `../img/covers/img9.jpg`
+    imgSrc: `./img/covers/img9.jpg`
 },
 {
     title:`Sour Candy`,
@@ -87,22 +87,25 @@ const songList = [
     album:`Chromatica`,
     genre:`pop`,
     songSrc: `/music/sour-candy.mp3`,
-    imgSrc: `../img/covers/img10.jpeg`
+    imgSrc: `./img/covers/img10.jpeg`
 },
 ]
+const getEl = (selector) => document.getElementById(selector)
 
-const playingTitle = document.getElementById(`playingTitle`)
-const artistPlaying = document.getElementById(`artistPlaying`)
-const songSrc = document.getElementById(`audio`)
-const playOrpause = document.getElementById(`playPause`)
-const nextSong = document.getElementById(`nextBtn`)
-const prevSong = document.getElementById(`prevBtn`)
+const playingTitle = getEl(`playingTitle`)
+const artistPlaying = getEl(`artistPlaying`)
+const songSrc = getEl(`audio`)
+const coverPlaying = getEl(`cover`)
+const playOrpause = getEl(`playPause`)
+const nextSong = getEl(`nextBtn`)
+const prevSong = getEl(`prevBtn`)
 
 let playingIndex = 0
 
 
 const musicPlaying = new Audio()
 musicPlaying.src = songList[playingIndex].songSrc
+coverPlaying.src = songList[playingIndex].imgSrc
 
 //// Play and pause song on Index
 playOrpause.addEventListener(`click`, function(){
@@ -119,20 +122,37 @@ playOrpause.addEventListener(`click`, function(){
 }) 
 
 //// Previous button
-prevBtn.addEventListener("click", function() {
+prevBtn.addEventListener(`click`, function() {
     playingIndex --
 
     if (playingIndex < 0){
     playingIndex = songList.length - 1
     } else {
-    musicPlaying.src = songList[playingIndex - 1].songSrc
+    musicPlaying.src = songList[playingIndex].songSrc
     }
+    playingTitle.innerText = `${songList[playingIndex].title}`
+    artistPlaying.innerText = `${songList[playingIndex].artist}`
+    musicPlaying.src = songList[playingIndex].songSrc
+    coverPlaying.src = `${songList[playingIndex].imgSrc}`
+
+    musicPlaying.play();
     
+  })
+
+
+  ////Next button
+nextBtn.addEventListener(`click`, function() {
+    playingIndex ++
+
+    if (playingIndex > songList.length){
+    playingIndex = 0
+    } else {
+    musicPlaying.src = songList[playingIndex].songSrc
+    }
     playingTitle.innerText = `${songList[playingIndex].title}`
     artistPlaying.innerText = `${songList[playingIndex].artist}`
     musicPlaying.src = songList[playingIndex].songSrc
     musicPlaying.play();
-  
   })
 
   
