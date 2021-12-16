@@ -91,6 +91,9 @@ const songList = [
 },
 ]
 
+const playingTitle = document.getElementById(`playingTitle`)
+
+
 //show Array as a list of songs
 const addSong = function(song) {
 	document.getElementById(`song-list`).innerHTML += `
@@ -102,6 +105,12 @@ const addSong = function(song) {
     `
 }
 
+
+let playingIndex = 0
+
+addSong(songList[playingIndex])
+
+
 // Play and pause music while changing the image src
 songList.forEach(addSong)
 
@@ -112,8 +121,6 @@ const prevSong = document.getElementById(`prevBtn`)
 const kpopCat = document.getElementById(`kpop`)
 const kpop = []
 
-let playingIndex = 3
-
 const musicPlaying = new Audio(`/music/blonde.mp3`)
 
 
@@ -122,7 +129,7 @@ playOrpause.addEventListener(`click`, function(event){
     musicPlaying.play();
     document.getElementById(`playPause`).src=`img/buttons/play-arrow.svg`;
 
-    document.getElementById(`songTitle`).innerText = `${song.title}`
+    playingTitle.innerText = `${song.title}`
     
     } 
     else {
@@ -132,33 +139,19 @@ playOrpause.addEventListener(`click`, function(event){
 }) 
 
 /////Filter
-const titleSearch = document.getElementById(`search`);
+const titleSearch = document.getElementById(search);
 
-titleSearch.addEventListener(`submit`, searchSong)
-
-
-const searchSong = function() {
+const searchSong = function(e) {
+    e.preventDefault();
     // Check the form's values, do some stuff...
-    const nameSearch = filterForm.querySelector(`#searchName`).value
-  
+    const nameSearch = document.getElementById('input-search').value
+
     // Clear out the existing results
-    document.querySelector(`#song-list`).innerHTML = ``
+    document.querySelector(#song-list).innerHTML = ``
   
     songList
       .filter(song => song.title.toUpperCase().includes(nameSearch.toUpperCase()))
       .forEach(addSong)
   }
 
-
-
-
-
-
-
-
-kpopCat.addEventListener(`click`, function(category){
-    if (songList.genre === kpop){
-        kpop.push(category)
-    } else
-
-})
+titleSearch.addEventListener(`submit`, searchSong)
