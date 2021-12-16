@@ -93,6 +93,7 @@ const songList = [
 
 const playingTitle = document.getElementById(`playingTitle`)
 const artistPlaying = document.getElementById(`artistPlaying`)
+const songSrc = document.getElementById(`audio`)
 const playOrpause = document.getElementById(`playPause`)
 const nextSong = document.getElementById(`nextBtn`)
 const prevSong = document.getElementById(`prevBtn`)
@@ -122,22 +123,17 @@ prevBtn.addEventListener("click", function() {
     playingIndex --
 
     if (playingIndex < 0){
-
     playingIndex = songList.length - 1
-
-    musicPlaying.src = songList[playingIndex].songSrc
-    musicPlaying.play();
     } else {
-
-    playingIndex --
-
-    musicPlaying.src = songList[playingIndex].songSrc
-    musicPlaying.play();
+    musicPlaying.src = songList[playingIndex - 1].songSrc
     }
+    
     playingTitle.innerText = `${songList[playingIndex].title}`
     artistPlaying.innerText = `${songList[playingIndex].artist}`
+    musicPlaying.src = songList[playingIndex].songSrc
+    musicPlaying.play();
   
-  });
+  })
 
   
 
