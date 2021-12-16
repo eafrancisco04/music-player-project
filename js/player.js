@@ -89,12 +89,10 @@ const songList = [
     songSrc: `/music/sour-candy.mp3`,
     imgSrc: `../img/covers/img10.jpeg`
 },
-
 ]
 
 //show Array as a list of songs
 const addSong = function(song) {
-	// Concatinate to the existing string
 	document.getElementById(`song-list`).innerHTML += `
     <li class="song">
 		<h3 class="title"><b>${song.title}</b> - ${song.artist}</h3>
@@ -108,13 +106,24 @@ const addSong = function(song) {
 songList.forEach(addSong)
 
 const playOrpause = document.getElementById(`playPause`)
+const nextSong = document.getElementById(`nextBtn`)
+const prevSong = document.getElementById(`prevBtn`)
+
+const kpopCat = document.getElementById(`kpop`)
+const kpop = []
+
+let playingIndex = 3
 
 const musicPlaying = new Audio(`/music/blonde.mp3`)
+
 
 playOrpause.addEventListener(`click`, function(event){
     if (musicPlaying.paused) {
     musicPlaying.play();
     document.getElementById(`playPause`).src=`img/buttons/play-arrow.svg`;
+
+    document.getElementById(`songTitle`).innerText = `${song.title}`
+    
     } 
     else {
     musicPlaying.pause();
@@ -122,3 +131,34 @@ playOrpause.addEventListener(`click`, function(event){
     }
 }) 
 
+/////Filter
+const titleSearch = document.getElementById(`search`);
+
+titleSearch.addEventListener(`submit`, searchSong)
+
+
+const searchSong = function() {
+    // Check the form's values, do some stuff...
+    const nameSearch = filterForm.querySelector(`#searchName`).value
+  
+    // Clear out the existing results
+    document.querySelector(`#song-list`).innerHTML = ``
+  
+    songList
+      .filter(song => song.title.toUpperCase().includes(nameSearch.toUpperCase()))
+      .forEach(addSong)
+  }
+
+
+
+
+
+
+
+
+kpopCat.addEventListener(`click`, function(category){
+    if (songList.genre === kpop){
+        kpop.push(category)
+    } else
+
+})
