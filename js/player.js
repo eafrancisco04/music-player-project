@@ -118,9 +118,6 @@ const playOrpause = document.getElementById(`playPause`)
 const nextSong = document.getElementById(`nextBtn`)
 const prevSong = document.getElementById(`prevBtn`)
 
-const kpopCat = document.getElementById(`kpop`)
-const kpop = []
-
 const musicPlaying = new Audio(`/music/blonde.mp3`)
 
 
