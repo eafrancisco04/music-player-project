@@ -5,7 +5,7 @@ const songList = [
     duration:`03:35`,
     album:`Head Above Water`,
     genre:`pop`,
-    songSrc: `/music/coversblonde.mp3`,
+    songSrc: `/music/blonde.mp3`,
     imgSrc: `../img/covers/img1.png`
 },
 {
@@ -77,7 +77,7 @@ const songList = [
     duration:`03:21`,
     album:`Mria`,
     genre:`kpop`,
-    songSrc: `/music/marias.mp3`,
+    songSrc: `/music/maria.mp3`,
     imgSrc: `../img/covers/img9.jpg`
 },
 {
@@ -93,8 +93,13 @@ const songList = [
 
 const playingTitle = document.getElementById(`playingTitle`)
 
+const playOrpause = document.getElementById(`playPause`)
+const nextSong = document.getElementById(`nextBtn`)
+const prevSong = document.getElementById(`prevBtn`)
 
-//show Array as a list of songs
+
+
+//show Array as a list of song
 const addSong = function(song) {
 	document.getElementById(`song-list`).innerHTML += `
     <li class="song">
@@ -105,23 +110,15 @@ const addSong = function(song) {
     `
 }
 
-
-let playingIndex = 0
-
-addSong(songList[playingIndex])
-
-
 // Play and pause music while changing the image src
 songList.forEach(addSong)
 
-const playOrpause = document.getElementById(`playPause`)
-const nextSong = document.getElementById(`nextBtn`)
-const prevSong = document.getElementById(`prevBtn`)
 
-const musicPlaying = new Audio(`/music/blonde.mp3`)
+const musicPlaying = new Audio()
+musicPlaying.src = songList[playingIndex].songSrc
 
-
-playOrpause.addEventListener(`click`, function(event){
+//// Play and pause song on Index
+playOrpause.addEventListener(`click`, function(){
     if (musicPlaying.paused) {
     musicPlaying.play();
     document.getElementById(`playPause`).src=`img/buttons/play-arrow.svg`;
@@ -134,6 +131,8 @@ playOrpause.addEventListener(`click`, function(event){
     document.getElementById(`playPause`).src=`img/buttons/pause.svg`;
     }
 }) 
+
+
 
 /////Filter by typing
 const titleSearch = document.getElementById(`search`);
