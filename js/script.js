@@ -93,6 +93,8 @@ const songList = [
 
 const playingTitle = document.getElementById(`playingTitle`)
 const playOrpause = document.getElementById(`playPause`)
+const nextSong = document.getElementById(`nextBtn`)
+const prevSong = document.getElementById(`prevBtn`)
 
 let playingIndex = 0
 
@@ -116,6 +118,20 @@ playOrpause.addEventListener(`click`, function(){
     }
 }) 
 
+//// Previous button
+prevBtn.addEventListener("click", function() {
+    playingIndex --
+
+    if (playingIndex < 0){
+
+    playingIndex = songList.length - 1
+    musicPlaying.play();
+    }
+  
+  });
+
+
+
 ////Display Array as list of songs
 const addSong = function(song) {
 	document.getElementById(`song-list`).innerHTML += `
@@ -127,5 +143,22 @@ const addSong = function(song) {
     `
 }
 
-
 songList.forEach(addSong)
+
+/////Filter by typing
+const titleSearch = document.getElementById(`search`);
+
+const searchSong = function(event) {
+    event.preventDefault();
+    
+    const nameSearch = document.getElementById('input-search').value
+
+    // Clear out the existing results
+    document.getElementById(`song-list`).innerHTML = ``
+  
+    songList
+      .filter(song => song.title.toUpperCase().includes(nameSearch.toUpperCase()))
+      .forEach(addSong)
+  }
+
+titleSearch.addEventListener(`submit`, searchSong)
