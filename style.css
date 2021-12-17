@@ -128,3 +128,24 @@ button {
 input {
     color: black;
 }
+
+input[type="range"] {
+    align-self: flex-end;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #474747;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+ }
+ input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 1em;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: rgba(155, 13, 234, 1);
+    border: thick solid rgba(255, 255, 255, 0.4);
+  }

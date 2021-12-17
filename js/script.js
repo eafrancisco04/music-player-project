@@ -99,13 +99,14 @@ const coverPlaying = getEl(`cover`)
 const playOrpause = getEl(`playPause`)
 const nextSong = getEl(`nextBtn`)
 const prevSong = getEl(`prevBtn`)
+const volume = getEl(`volume`)
 
 let playingIndex = 0
 
 
 const musicPlaying = new Audio()
 musicPlaying.src = songList[playingIndex].songSrc
-coverPlaying.src = songList[playingIndex].imgSrc
+
 
 //// Play and pause song on Index
 playOrpause.addEventListener(`click`, function(){
@@ -133,7 +134,7 @@ prevBtn.addEventListener(`click`, function() {
     playingTitle.innerText = `${songList[playingIndex].title}`
     artistPlaying.innerText = `${songList[playingIndex].artist}`
     musicPlaying.src = songList[playingIndex].songSrc
-    coverPlaying.src = `${songList[playingIndex].imgSrc}`
+    getEl(`cover`).setAttribute(`src`, songlist[playingIndex].imgSrc)
 
     musicPlaying.play();
     
@@ -160,13 +161,23 @@ nextBtn.addEventListener(`click`, function() {
 ////Display Array as list of songs
 const addSong = function(song) {
 	document.getElementById(`song-list`).innerHTML += `
-    <li class="song">
+    <li id="song">
 		<h3 class="title"><b>${song.title}</b> - ${song.artist}</h3>
         
 		<h5 class="duration">${song.duration}</h5>
 	</li>
     `
 }
+
+////Make songs playable on click
+
+const allSongs = getEl(`song`)
+
+const playThisSong = function(event) {
+    const thisSOng = event.target
+    const songUrl = thisSong.getAttribute(`src`)
+}
+
 
 songList.forEach(addSong)
 
@@ -187,3 +198,11 @@ const searchSong = function(event) {
   }
 
 titleSearch.addEventListener(`submit`, searchSong)
+
+////ADjust volume
+
+volume.addEventListener(`input`, function(event){
+
+    musicPlaying.volume = volume.value
+
+})
