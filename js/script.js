@@ -155,7 +155,7 @@ nextBtn.addEventListener(`click`, function() {
     artistPlaying.innerText = `${songList[playingIndex].artist}`
     musicPlaying.src = songList[playingIndex].songSrc
     coverPlaying.src = songList[playingIndex].imgSrc
-    
+
     musicPlaying.play();
   })
 
@@ -165,8 +165,7 @@ nextBtn.addEventListener(`click`, function() {
 const addSong = function(song) {
 	document.getElementById(`song-list`).innerHTML += `
     <li id="song">
-		<h3 class="title"><b>${song.title}</b> - ${song.artist}</h3>
-        
+		<h3 class="title">${song.title} - <i>${song.artist}</i></h3>
 		<h5 class="duration">${song.duration}</h5>
 	</li>
     `

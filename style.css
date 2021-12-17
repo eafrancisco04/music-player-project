@@ -12,26 +12,20 @@ body{
         rgb(55, 56, 59) 23.8%,
         rgb(2, 3, 17) 92%
       );  }
-
-h4 {
-    margin: 0;
-}
-
-/* header {
-    display: flex;
-    justify-content: center;
-    padding: 0 1rem;
-    background-color: rgb(22, 22, 22);
+header {
+    margin: auto;
+    place-content: center;
     color: #fff;
-} */
+    text-align: center;
+}
 .playlist-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto auto 2em auto;
 
-    padding: 1em;
     max-width: 25%;
+    padding: 1rem;
 
     background-color: rgb(94, 91, 91) 92%;
     border-radius: 5em;
@@ -46,11 +40,15 @@ h4 {
 .playing-song {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
     margin: auto;
     
+}
+
+h4 {
+    margin: auto;
 }
 .buttonsPlayer {
     display: flex;
@@ -78,15 +76,12 @@ ul {
 #song {
     display: flex;
     justify-content: space-between;
-
     border-bottom: solid rgba(220, 162, 245, 0.5);
     
     list-style-type: none;
-    
 
     color: white;
 }
-
 .duration  {
     align-self: flex-end;
 }
@@ -123,6 +118,7 @@ button {
     box-shadow: 4px 4px 5px rgba(0, 0, 0, .4), -1px -4px 5px rgba(52, 52, 52, .7);
     outline: none;
     }
+
 /* Slider volume*/
 input {
     color: black;
@@ -130,6 +126,7 @@ input {
 
 input[type="range"] {
     align-self: flex-end;
+    margin-bottom: 2em;
     -webkit-appearance: none;
     width: 100%;
     height: 5px;
@@ -148,4 +145,8 @@ input[type="range"] {
     height: 15px;
     background: rgba(155, 13, 234, 1);
     border: thick solid rgba(255, 255, 255, 0.4);
+  }
+
+  #input-search {
+    height: 2.5em;
   }
