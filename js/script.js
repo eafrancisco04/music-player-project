@@ -106,20 +106,21 @@ let playingIndex = 0
 
 const musicPlaying = new Audio()
 musicPlaying.src = songList[playingIndex].songSrc
+coverPlaying.src = songList[playingIndex].imgSrc
 
 
 //// Play and pause song on Index
 playOrpause.addEventListener(`click`, function(){
     if (musicPlaying.paused) {
     musicPlaying.play();
-    document.getElementById(`playPause`).src=`img/buttons/play-arrow.svg`;
+    document.getElementById(`playPause`).src=`img/buttons/pause.svg`;
     
     } 
     else {
     musicPlaying.pause();
-    document.getElementById(`playPause`).src=`img/buttons/pause.svg`;
-
+    document.getElementById(`playPause`).src=`img/buttons/play-arrow.svg`;
     }
+
 }) 
 
 //// Previous button
@@ -134,7 +135,7 @@ prevBtn.addEventListener(`click`, function() {
     playingTitle.innerText = `${songList[playingIndex].title}`
     artistPlaying.innerText = `${songList[playingIndex].artist}`
     musicPlaying.src = songList[playingIndex].songSrc
-    getEl(`cover`).setAttribute(`src`, songlist[playingIndex].imgSrc)
+    coverPlaying.src = songList[playingIndex].imgSrc
 
     musicPlaying.play();
     
@@ -153,6 +154,8 @@ nextBtn.addEventListener(`click`, function() {
     playingTitle.innerText = `${songList[playingIndex].title}`
     artistPlaying.innerText = `${songList[playingIndex].artist}`
     musicPlaying.src = songList[playingIndex].songSrc
+    coverPlaying.src = songList[playingIndex].imgSrc
+    
     musicPlaying.play();
   })
 
@@ -172,11 +175,6 @@ const addSong = function(song) {
 ////Make songs playable on click
 
 const allSongs = getEl(`song`)
-
-const playThisSong = function(event) {
-    const thisSOng = event.target
-    const songUrl = thisSong.getAttribute(`src`)
-}
 
 
 songList.forEach(addSong)
