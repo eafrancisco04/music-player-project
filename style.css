@@ -75,7 +75,7 @@ img {
 ul {
     list-style-type: none;
 }
-.song {
+#song {
     display: flex;
     justify-content: space-between;
 
@@ -97,8 +97,7 @@ ul {
 }
 
 aside {
-    align-self: flex-end;
-    
+    align-self: flex-end; 
 }
 
 .Btn {
@@ -124,7 +123,7 @@ button {
     box-shadow: 4px 4px 5px rgba(0, 0, 0, .4), -1px -4px 5px rgba(52, 52, 52, .7);
     outline: none;
     }
-
+/* Slider volume*/
 input {
     color: black;
 }
@@ -140,6 +139,7 @@ input[type="range"] {
     -webkit-transition: .2s;
     transition: opacity .2s;
  }
+
  input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     border-radius: 1em;
