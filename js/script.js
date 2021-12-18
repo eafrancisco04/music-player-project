@@ -100,6 +100,7 @@ const playOrpause = getEl(`playPause`)
 const nextSong = getEl(`nextBtn`)
 const prevSong = getEl(`prevBtn`)
 const volume = getEl(`volume`)
+const replaySong = getEl(`replayBtn`)
 
 let playingIndex = 0
 
@@ -125,7 +126,6 @@ playOrpause.addEventListener(`click`, function(){
 
 //// Previous button
 prevBtn.addEventListener(`click`, function() {
-    playingIndex --
 
     if (playingIndex < 0){
     playingIndex = songList.length - 1
@@ -159,7 +159,10 @@ nextBtn.addEventListener(`click`, function() {
     musicPlaying.play();
   })
 
-  
+/////Repeat button
+replayBtn.addEventListener(`click`, function(){
+    musicPlaying.currentTime = 0
+}) 
 
 ////Display Array as list of songs
 const addSong = function(song) {
