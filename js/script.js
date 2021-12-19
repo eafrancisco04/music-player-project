@@ -126,7 +126,8 @@ playOrpause.addEventListener(`click`, function(){
 
 //// Previous button
 prevBtn.addEventListener(`click`, function() {
-
+    playingIndex --
+	
     if (playingIndex < 0){
     playingIndex = songList.length - 1
     } else {
