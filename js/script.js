@@ -5,7 +5,7 @@ const songList = [
     duration:`03:35`,
     album:`Head Above Water`,
     genre:`pop`,
-    songSrc: `https://raw.githubusercontent.com/music-player-project/music/blonde.mp3`,
+    songSrc: `hhttps://flames04.github.io/music-player-project/music/blonde.mp3`,
     imgSrc: `./img/covers/img1.png`
 },
 {
@@ -14,7 +14,7 @@ const songList = [
     duration:`03:23`,
     album:`Bomb (Single)`,
     genre:`kpop`,
-    songSrc: `https://raw.githubusercontent.com/music-player-project/music/bomb.mp3`,
+    songSrc: `https://flames04.github.io/music-player-project/music/bomb.mp3`,
     imgSrc: `./img/covers/img2.png`
 },
 {
@@ -23,7 +23,7 @@ const songList = [
     duration:`02:45`,
     album:`Butter (Single)`,
     genre:`kpop`,
-    songSrc: `https://raw.githubusercontent.com/music-player-project/music/butter.mp3`,
+    songSrc: `https://flames04.github.io/music-player-project/music/butter.mp3`,
     imgSrc: `./img/covers/img3.png`
 },
 {
@@ -32,7 +32,7 @@ const songList = [
     duration:`03:45`,
     album:`Lungs`,
     genre:`alternative`,
-    songSrc: `https://raw.githubusercontent.com/music-player-project/music/dog.mp3`,
+    songSrc: `https://flames04.github.io/music-player-project/music/dog.mp3`,
     imgSrc: `./img/covers/img4.jpg`
 },
 {
@@ -41,7 +41,7 @@ const songList = [
     duration:`03:44`,
     album:`Debut (Single)`,
     genre:`kpop`,
-    songSrc: `https://raw.githubusercontent.com/music-player-project/music/fire.mp3`,
+    songSrc: `https://flames04.github.io/music-player-project/music/fire.mp3`,
     imgSrc: `./img/covers/img5.jpg`
 },
 {
@@ -50,7 +50,7 @@ const songList = [
     duration:`04:05`,
     album:`Naruto Soundtrack`,
     genre:`anime`,
-    songSrc: `https://raw.githubusercontent.com/music-player-project/music/go.mp3`,
+    songSrc: `https://flames04.github.io/music-player-project/music/go.mp3`,
     imgSrc: `./img/covers/img6.jpg`
 },
 {
@@ -59,7 +59,7 @@ const songList = [
     duration:`03:20`,
     album:`IT'z ICY`,
     genre:`kpop`,
-    songSrc: `https://raw.githubusercontent.com/music-player-project/music/icy.mp3`,
+    songSrc: `https://flames04.github.io/music-player-project/music/icy.mp3`,
     imgSrc: `./img/covers/img7.jpg`
 },
 {
@@ -68,7 +68,7 @@ const songList = [
     duration:`02:40`,
     album:`Heaven & Hell`,
     genre:`pop`,
-    songSrc: `https://raw.githubusercontent.com/music-player-project/music/kings-queens.mp3`,
+    songSrc: `https://flames04.github.io/music-player-project/music/kings-queens.mp3`,
     imgSrc: `./img/covers/img8.jpg`
 },
 {
@@ -77,7 +77,7 @@ const songList = [
     duration:`03:21`,
     album:`Mria`,
     genre:`kpop`,
-    songSrc: `https://raw.githubusercontent.com/music-player-project/music/maria.mp3`,
+    songSrc: `https://flames04.github.io/music-player-project/music/maria.mp3`,
     imgSrc: `./img/covers/img9.jpg`
 },
 {
@@ -86,7 +86,7 @@ const songList = [
     duration:`03:21`,
     album:`Chromatica`,
     genre:`pop`,
-    songSrc: `https://raw.githubusercontent.com/music-player-project/music/sour-candy.mp3`,
+    songSrc: `https://flames04.github.io/music-player-project/music/sour-candy.mp3`,
     imgSrc: `./img/covers/img10.jpeg`
 },
 ]
