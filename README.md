@@ -17,4 +17,6 @@
 
 
 References
-- For slider styling: https://www.w3schools.com/howto/howto_js_rangeslider.asp
+- https://www.w3schools.com/howto/howto_js_rangeslider.asp
+- https://www.youtube.com/watch?v=QTHRWGn_sJw&t=1917s
+
